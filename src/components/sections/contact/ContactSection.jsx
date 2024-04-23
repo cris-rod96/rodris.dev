@@ -1,6 +1,33 @@
+import { useState } from "react";
 import { RiMailLine } from "react-icons/ri";
+import { Toaster, toast } from "sonner";
+import { messageEndpoint } from "../../../api/message.api";
 
 const ContactSection = () => {
+  const [messageData, setMessageData] = useState({
+    to: "",
+    name: "",
+    message: "",
+  });
+
+  const handleMessageData = (e) => {
+    const { name, value } = e.target;
+    setMessageData({
+      ...messageData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await messageEndpoint.saveMessage(messageData);
+      toast.success(response.data.message);
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <section className="border-b border-gray-500/20 py-10">
       <div className="lg:w-4/5 mx-auto">
@@ -21,7 +48,11 @@ const ContactSection = () => {
             perspiciatis blanditiis!
           </h5>
 
-          <form action="" className="mt-10 flex flex-col gap-3">
+          <form
+            action=""
+            className="mt-10 flex flex-col gap-3"
+            onSubmit={handleSubmit}
+          >
             <div className="grid grid-cols-2 gap-2">
               <div className="flex flex-col gap-2">
                 <label htmlFor="" className="text-lg">
@@ -29,6 +60,9 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  value={messageData.name}
+                  onChange={handleMessageData}
                   className="px-2 py-3 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10"
                 />
               </div>
@@ -38,6 +72,9 @@ const ContactSection = () => {
                 </label>
                 <input
                   type="email"
+                  name="to"
+                  value={messageData.to}
+                  onChange={handleMessageData}
                   className="px-2 py-3 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10"
                 />
               </div>
@@ -45,20 +82,26 @@ const ContactSection = () => {
             <div className="flex flex-col gap-2">
               <label htmlFor="">Mensaje</label>
               <textarea
-                name=""
-                id=""
+                name="message"
+                value={messageData.message}
                 cols="30"
                 rows="10"
+                onChange={handleMessageData}
                 className="resize-none outline-none border border-transparent focus:border-gray-500/10 px-3 py-2 bg-neutral-900 text-sm"
               ></textarea>
             </div>
 
-            <button className="mt-5 border border-gray-500/20 py-3 bg-primary text-white font-bold text-lg hover:bg-primary/75 transition-colors duration-300">
+            <button
+              type="submit"
+              className="mt-5 border border-gray-500/20 py-3 bg-primary text-white font-bold text-lg hover:bg-primary/75 transition-colors duration-300"
+            >
               Enviar mensaje
             </button>
           </form>
         </div>
       </div>
+
+      <Toaster richColors />
     </section>
   );
 };
