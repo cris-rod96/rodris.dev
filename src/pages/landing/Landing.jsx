@@ -1,5 +1,21 @@
+import {
+  AboutSection,
+  ContactSection,
+  HeaderSection,
+  ProjectSection,
+  SkillSection,
+} from "../../components/sections";
+
 const Landing = () => {
-  return <div>Landing</div>;
+  return (
+    <>
+      <HeaderSection />
+      <ProjectSection />
+      <SkillSection />
+      <AboutSection />
+      <ContactSection />
+    </>
+  );
 };
 
 export default Landing;

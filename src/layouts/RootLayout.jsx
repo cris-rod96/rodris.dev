@@ -13,10 +13,8 @@ const RootLayout = () => {
       <button onClick={toggleMenu} className="lg:hidden fixed top-5 left-5">
         <RiMenuFill size={30} />
       </button>
-      <main className="lg:pl-[14vw] lg:py-10 px-5 py-20 ">
-        <section className="lg:mx-20">
-          <Outlet />
-        </section>
+      <main className="pl-[13vw] w-full pb-20 ">
+        <Outlet />
       </main>
     </>
   );
