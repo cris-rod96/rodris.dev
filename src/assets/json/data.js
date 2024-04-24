@@ -23,27 +23,27 @@ import { TfiGithub } from "react-icons/tfi";
 export const menu = [
   {
     path: "/",
-    label: "Home",
+    label: "Inicio",
     icon: RiHome6Line,
   },
   {
     path: "/projects",
-    label: "Projects",
+    label: "Proyectos",
     icon: RiCodeSSlashLine,
   },
   {
     path: "/skills",
-    label: "Skills",
+    label: "Habilidades",
     icon: RiGlassesLine,
   },
   {
     path: "/about",
-    label: "About Me",
+    label: "Sobre mí",
     icon: RiUserLine,
   },
   {
     path: "/contact",
-    label: "Contact",
+    label: "Contacto",
     icon: RiMailLine,
   },
 ];
@@ -69,19 +69,19 @@ export const social = [
 export const projects = [
   {
     name: "Shoe Kingdom",
-    poster: "/project1.png",
+    poster: "/shoe_kingdom.png",
     description:
       "Shoe Kingdom es un sitio web para amantes de las zapatillas. Este proyecto fue realizado como parte del Proyecto Final del Bootcamp de Henry",
 
     urls: [
       {
         icon: BsBrowserChrome,
-        url: "",
+        url: "https://shoe-kingdom-ae164.web.app/",
         label: "Deploy",
       },
       {
         icon: TfiGithub,
-        url: "",
+        url: "https://github.com/PF-grupo2/pf-henry-frontend",
         label: "Code",
       },
       {
@@ -92,8 +92,8 @@ export const projects = [
     ],
   },
   {
-    name: "Shoe Kingdom",
-    poster: "/project1.png",
+    name: "Rick & Morty Wiki",
+    poster: "/rick_and_morty.png",
     description:
       "Shoe Kingdom es un sitio web para amantes de las zapatillas. Este proyecto fue realizado como parte del Proyecto Final del Bootcamp de Henry",
 
@@ -105,7 +105,7 @@ export const projects = [
       },
       {
         icon: TfiGithub,
-        url: "",
+        url: "https://github.com/cris-rod96/my_rick_and_morty",
         label: "Code",
       },
       {
@@ -116,20 +116,20 @@ export const projects = [
     ],
   },
   {
-    name: "Shoe Kingdom",
-    poster: "/project1.png",
+    name: "Flag Countries Wiki",
+    poster: "/countries.png",
     description:
       "Shoe Kingdom es un sitio web para amantes de las zapatillas. Este proyecto fue realizado como parte del Proyecto Final del Bootcamp de Henry",
 
     urls: [
       {
         icon: BsBrowserChrome,
-        url: "",
+        url: "https://pi-countries-three-alpha.vercel.app/",
         label: "Deploy",
       },
       {
         icon: TfiGithub,
-        url: "",
+        url: "https://github.com/cris-rod96/pi-countries.git",
         label: "Code",
       },
       {

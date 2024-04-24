@@ -4,11 +4,12 @@ import { Toaster, toast } from "sonner";
 import { messageEndpoint } from "../../../api/message.api";
 
 const ContactSection = () => {
-  const [messageData, setMessageData] = useState({
+  const initialState = {
     to: "",
     name: "",
     message: "",
-  });
+  };
+  const [messageData, setMessageData] = useState(initialState);
 
   const handleMessageData = (e) => {
     const { name, value } = e.target;
@@ -21,15 +22,24 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await messageEndpoint.saveMessage(messageData);
-      toast.success(response.data.message);
+      if (!Object.values(messageData).some((data) => data === "")) {
+        const response = await messageEndpoint.saveMessage(messageData);
+        toast.success(response.data.message);
+        resetForm();
+      } else {
+        toast.error("Todos los campos son obligatorios");
+      }
     } catch (error) {
       toast.error(error.message);
     }
   };
 
+  const resetForm = () => {
+    setMessageData(initialState);
+  };
+
   return (
-    <section className="border-b border-gray-500/20 py-10">
+    <section className="border-b border-gray-500/20 py-10" id="contact">
       <div className="lg:w-4/5 mx-auto">
         <h2 className="text-3xl flex items-center gap-2 text-gray-500 mb-10">
           <RiMailLine />

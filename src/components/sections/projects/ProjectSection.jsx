@@ -10,7 +10,7 @@ const ProjectSection = () => {
       <div className="lg:w-4/5 mx-auto flex flex-col">
         <h2 className="text-3xl flex items-center gap-2 text-gray-500 mb-10">
           <RiCodeSSlashLine />
-          Projectos Destacados
+          Proyectos Destacados
         </h2>
         <div className="grid grid-cols-3 gap-3 mb-10">
           {featuredProjects.map((project) => (

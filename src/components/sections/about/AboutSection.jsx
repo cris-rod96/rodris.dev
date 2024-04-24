@@ -12,32 +12,41 @@ const AboutSection = () => {
         </h2>
 
         <div className="grid grid-cols-2 mb-10">
-          <div className="space-y-5 [&>p]:text-lg text-wrap text-gray-300">
+          <div className="space-y-5 [&>p]:text-lg text-wrap text-gray-500 font-light">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, iure sunt blanditiis alias, ea nam, libero enim
-              fugiat eligendi quo molestiae? Dignissimos quae iste officiis.
-              Eius minima ipsa veniam consequuntur iste dolores recusandae esse
-              dolorum sint repellat provident, velit nostrum?
+              ¡Hola! Soy Cristhian Rodríguez, aunque mis amigos me llaman
+              Rodris. Originario de Ecuador, me especialicé en Ingeniería en
+              Informática y Sistemas Computacionales. Aunque no me gradué
+              oficialmente, tengo una sólida formación en este campo.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut
-              et tempore optio dolores soluta, molestias sapiente doloremque
-              ratione exercitationem incidunt! Voluptate sapiente temporibus
-              veniam incidunt impedit, animi vitae amet esse, magnam molestiae
-              aliquid culpa provident reiciendis molestias quas ut in sunt.
-              Asperiores dolorem accusamus illum error saepe similique commodi.
+              Mi inmersión en el mundo de la programación comenzó en el año
+              2014, y desde entonces he estado comprometido con el aprendizaje y
+              el crecimiento continuo. El Bootcamp de Henry fue un paso
+              importante en mi camino, proporcionándome las habilidades y el
+              conocimiento adicionales necesarios para convertirme en un
+              desarrollador full stack.
             </p>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut
-              et tempore optio dolores soluta, molestias sapiente doloremque
-              ratione exercitationem incidunt! Voluptate sapiente temporibus
-              veniam incidunt impedit, animi vitae amet esse, magnam molestiae
-              aliquid culpa provident reiciendis molestias quas ut in sunt.
-              Asperiores dolorem accusamus illum error saepe similique commodi.
+              Aunque me desenvuelvo bien en el desarrollo full stack, mi
+              verdadera pasión y enfoque se encuentran en el Backend. Disfruto
+              creando soluciones sólidas y eficientes que respalden las
+              aplicaciones y sistemas que construimos. Sin embargo, eso no
+              significa que le tema al Frontend; estoy dispuesto a enfrentar
+              cualquier desafío que se presente en el camino.
+            </p>
+            <p>
+              A través de mi portafolio, te invito a explorar algunos de los
+              proyectos en los que he trabajado, donde podrás ver mi enfoque en
+              la creación de soluciones robustas y escalables. Estoy siempre
+              abierto a nuevas oportunidades de colaboración y crecimiento, así
+              que no dudes en ponerte en contacto si estás interesado en
+              trabajar juntos para llevar tus ideas al siguiente nivel. ¡Espero
+              que disfrutes explorando mi trabajo tanto como yo disfruté
+              creándolo!
             </p>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-start justify-center">
             <div className="w-[500px] h-[600px] relative rounded-lg overflow-hidden border-2 border-gray-500/30">
               <img
                 src="/me.jpg"
