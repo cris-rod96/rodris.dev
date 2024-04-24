@@ -16,10 +16,13 @@ const HeaderSection = () => {
             />
           </div>
 
-          <button className="flex items-center gap-2 px-3 py-2 border border-green-800 text-green-800 bg-green-800/10 hover:text-green-600 transition-all duration-300 md:w-auto md:justify-start md:mb-0 w-full justify-center mb-5 ">
+          <a
+            href="#contact"
+            className="flex items-center gap-2 px-3 py-2 border border-green-800 text-green-800 bg-green-800/10 hover:text-green-600 transition-all duration-300 md:w-auto md:justify-start md:mb-0 w-full justify-center mb-5 "
+          >
             <GoDotFill />
             Open to work
-          </button>
+          </a>
         </div>
 
         <div className="md:max-w-3xl mb-14">
