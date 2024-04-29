@@ -2,19 +2,51 @@ import { RiCodeSSlashLine } from "react-icons/ri";
 import { projects } from "../../../assets/json/data";
 import { NavLink } from "react-router-dom";
 import { ViewMoreButton } from "../../ui";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect, useState } from "react";
 
 const ProjectSection = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      translateX: 0,
+      transition: { duration: 0.5, delay: 0.5 },
+    },
+    hidden: { opacity: 0, translateX: -100 },
+  };
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
   const featuredProjects = projects.slice(0, 3);
   return (
-    <section className="border-b border-gray-500/20 py-10">
+    <motion.div
+      className="border-b border-gray-500/20 py-10"
+      ref={ref}
+      variants={variants}
+      initial="hidden"
+      animate={control}
+    >
       <div className="lg:w-4/5 mx-auto flex flex-col">
-        <h2 className="text-3xl flex items-center gap-2 text-gray-500 mb-10">
+        <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-500 mb-10">
           <RiCodeSSlashLine />
           Proyectos Destacados
         </h2>
-        <div className="grid grid-cols-3 gap-3 mb-10">
+        <div className="grid md:grid-cols-3 gap-3 md:mb-10">
           {featuredProjects.map((project) => (
-            <div className="cursor-pointer group">
+            <div
+              className="cursor-pointer group mb-10 border-b border-gray-500/20 pb-10-"
+              // ref={ref}
+            >
               <div className="w-full h-72 relative overflow-hidden mb-3">
                 <img
                   src={project.poster}
@@ -48,7 +80,7 @@ const ProjectSection = () => {
         </div>
         <ViewMoreButton to={"/projects"} text={"Todos los proyectos"} />
       </div>
-    </section>
+    </motion.div>
   );
 };
 

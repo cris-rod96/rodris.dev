@@ -100,7 +100,7 @@ export const projects = [
     urls: [
       {
         icon: BsBrowserChrome,
-        url: "",
+        url: "https://my-rick-and-morty.vercel.app/",
         label: "Deploy",
       },
       {

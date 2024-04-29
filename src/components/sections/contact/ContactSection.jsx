@@ -39,23 +39,27 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="border-b border-gray-500/20 py-10" id="contact">
-      <div className="lg:w-4/5 mx-auto">
-        <h2 className="text-3xl flex items-center gap-2 text-gray-500 mb-10">
+    <section className=" py-10" id="contact">
+      <div className="md:w-4/5 mx-auto">
+        <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-500 mb-10">
           <RiMailLine />
           Contáctame
         </h2>
 
         {/* Formulario de contacto */}
-        <div className="w-3/4 mx-auto">
-          <h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
-            vitae!
+        <div className="md:w-3/4 mx-auto">
+          <h3 className="md:text-4xl text-2xl text-white mb-3">
+            ¿Deseas que hablemos?
           </h3>
-          <h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit vero
-            quisquam cum a culpa totam architecto exercitationem, doloribus
-            perspiciatis blanditiis!
+          <h5 className="text-gray-500">
+            Si quieres hablar de un posible proyecto o simplemente saludarme,
+            envíame un mensaje o un correo electrónico a{" "}
+            <a
+              href="mailto:crisrodam1996@gmail.com?subject=Deseo contactarte"
+              className="text-white"
+            >
+              crisrodam1996@gmail.com
+            </a>
           </h5>
 
           <form
@@ -63,41 +67,37 @@ const ContactSection = () => {
             className="mt-10 flex flex-col gap-3"
             onSubmit={handleSubmit}
           >
-            <div className="grid grid-cols-2 gap-2">
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-lg">
-                  Nombre
-                </label>
+            <div className="grid md:grid-cols-2 md:gap-2">
+              <div className="flex flex-col mb-5 md:mb-0">
                 <input
                   type="text"
                   name="name"
                   value={messageData.name}
                   onChange={handleMessageData}
-                  className="px-2 py-3 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10"
+                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10 text-white placeholder:text-gray-500"
+                  placeholder="Tu nombre"
                 />
               </div>
-              <div className="flex flex-col gap-2">
-                <label htmlFor="" className="text-lg">
-                  Email
-                </label>
+              <div className="flex flex-col mb-5 md:mb-0">
                 <input
                   type="email"
                   name="to"
                   value={messageData.to}
                   onChange={handleMessageData}
-                  className="px-2 py-3 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10"
+                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10 text-white placeholder:text-gray-500"
+                  placeholder="Tu correo electrónico"
                 />
               </div>
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="">Mensaje</label>
               <textarea
                 name="message"
                 value={messageData.message}
                 cols="30"
                 rows="10"
                 onChange={handleMessageData}
-                className="resize-none outline-none border border-transparent focus:border-gray-500/10 px-3 py-2 bg-neutral-900 text-sm"
+                className="resize-none outline-none border border-transparent focus:border-gray-500/10 px-3 py-2 bg-neutral-900 text-sm text-white placeholder:text-gray-500"
+                placeholder="Tu mensaje"
               ></textarea>
             </div>
 
