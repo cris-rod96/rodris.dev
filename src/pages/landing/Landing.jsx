@@ -5,6 +5,7 @@ import {
   ProjectSection,
   SkillSection,
 } from "../../components/sections";
+import FooterSection from "../../components/sections/footer/FooterSection";
 
 const Landing = () => {
   return (
@@ -13,7 +14,6 @@ const Landing = () => {
       <ProjectSection />
       <SkillSection />
       <AboutSection />
-      <ContactSection />
     </>
   );
 };
