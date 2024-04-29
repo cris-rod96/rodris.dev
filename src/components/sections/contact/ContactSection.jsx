@@ -41,11 +41,6 @@ const ContactSection = () => {
   return (
     <section className=" py-10" id="contact">
       <div className="md:w-4/5 mx-auto">
-        <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-500 mb-10">
-          <RiMailLine />
-          Contáctame
-        </h2>
-
         {/* Formulario de contacto */}
         <div className="md:w-3/4 mx-auto">
           <h3 className="md:text-4xl text-2xl text-white mb-3">
