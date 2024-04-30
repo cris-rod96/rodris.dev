@@ -51,7 +51,7 @@ const ProjectSection = () => {
                 <img
                   src={project.poster}
                   alt=""
-                  className="absolute w-full h-full object-cover group-hover:scale-110 transition-all duration-300"
+                  className="absolute w-full h-full object-cover group-hover:scale-110 transition-all duration-300 aspect-video"
                 />
               </div>
               <div className="pl-2 w-full mb-4">

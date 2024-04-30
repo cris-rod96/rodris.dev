@@ -24,6 +24,7 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
                 key={item.path}
                 label={item.label}
                 icon={item.icon}
+                active={item.active}
               />
             ))}
           </nav>

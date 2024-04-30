@@ -3,11 +3,39 @@ import { social } from "../../../assets/json/data";
 import { GoDotFill } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const HeaderSection = () => {
+  const control = useAnimation();
+  const [ref, inView] = useInView();
+
+  const variants = {
+    visible: {
+      opacity: 1,
+      translateX: 0,
+      transition: {
+        duration: 1.5,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      translateX: 100,
+    },
+  };
+
+  useEffect(() => {
+    control.start(inView ? "visible" : "hidden");
+  }, [control, inView]);
+
   return (
-    <section className="border-b border-gray-500/20 py-20">
+    <motion.section
+      ref={ref}
+      variants={variants}
+      animate={control}
+      initial={"hidden"}
+      className="border-b border-gray-500/20 py-20"
+    >
       <div className="lg:w-4/5 mx-auto">
         <div className="flex items-start justify-between mb-10 md:flex-row flex-col-reverse">
           <div className="relative w-40 h-40 md:rounded-lg border-2 border-gray-500/30 mx-auto md:m-0 rounded-full">
@@ -54,7 +82,7 @@ const HeaderSection = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
