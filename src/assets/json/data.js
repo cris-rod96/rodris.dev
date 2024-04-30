@@ -1,5 +1,6 @@
 import { BiDetail } from "react-icons/bi";
 import { BsBrowserChrome } from "react-icons/bs";
+import { FaFilePdf } from "react-icons/fa";
 import {
   RiCodeSSlashLine,
   RiGlassesLine,
@@ -63,6 +64,11 @@ export const social = [
     link: "mailto:crisrodam1996@gmail.com?subject=Quiero contactar contigo",
     label: "Correo electrónico",
     icon: RiMailLine,
+  },
+  {
+    link: "/docs/CV_CRISTHIAN RODRIGUEZ.pdf",
+    label: "CV Cristhian Rodríguez",
+    icon: FaFilePdf,
   },
 ];
 
