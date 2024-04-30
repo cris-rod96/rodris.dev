@@ -4,6 +4,7 @@ import { Toaster, toast } from "sonner";
 import { messageEndpoint } from "../../../api/message.api";
 
 const ContactSection = () => {
+  const [sending, setSending] = useState(false);
   const initialState = {
     to: "",
     name: "",
@@ -21,16 +22,21 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setSending(true);
     try {
       if (!Object.values(messageData).some((data) => data === "")) {
-        const response = await messageEndpoint.saveMessage(messageData);
-        toast.success(response.data.message);
+        await messageEndpoint.saveMessage(messageData);
+        toast.success(
+          "Mensaje enviado con éxito. Nos comunicaremos contigo en unos momentos."
+        );
         resetForm();
       } else {
         toast.error("Todos los campos son obligatorios");
       }
     } catch (error) {
       toast.error(error.message);
+    } finally {
+      setSending(false);
     }
   };
 
@@ -100,7 +106,7 @@ const ContactSection = () => {
               type="submit"
               className="mt-5 border border-gray-500/20 py-3 bg-primary text-white font-bold text-lg hover:bg-primary/75 transition-colors duration-300"
             >
-              Enviar mensaje
+              {sending ? "Enviando..." : "Enviar mensaje"}
             </button>
           </form>
         </div>
