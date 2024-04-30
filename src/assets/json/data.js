@@ -19,6 +19,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import { TbMessageStar } from "react-icons/tb";
 import { TfiGithub } from "react-icons/tfi";
 
 export const menu = [
@@ -26,26 +27,37 @@ export const menu = [
     path: "/",
     label: "Inicio",
     icon: RiHome6Line,
+    active: true,
   },
   {
     path: "/projects",
     label: "Proyectos",
     icon: RiCodeSSlashLine,
+    active: true,
   },
   {
     path: "/skills",
     label: "Habilidades",
     icon: RiGlassesLine,
+    active: true,
   },
   {
     path: "/about",
     label: "Sobre mí",
     icon: RiUserLine,
+    active: true,
   },
   {
     path: "/contact",
     label: "Contacto",
     icon: RiMailLine,
+    active: true,
+  },
+  {
+    path: "/blog",
+    label: "Blog",
+    icon: TbMessageStar,
+    active: false,
   },
 ];
 
