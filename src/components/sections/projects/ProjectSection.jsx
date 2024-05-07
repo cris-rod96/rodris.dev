@@ -14,7 +14,7 @@ const ProjectSection = () => {
     visible: {
       opacity: 1,
       translateX: 0,
-      transition: { duration: 0.5, delay: 0.5 },
+      transition: { duration: 0.5, delay: 1.5 },
     },
     hidden: { opacity: 0, translateX: -100 },
   };
@@ -50,7 +50,7 @@ const ProjectSection = () => {
               <div className="w-full h-72 relative overflow-hidden mb-3">
                 <img
                   src={project.poster}
-                  alt=""
+                  alt={project.name}
                   className="absolute w-full h-full object-cover group-hover:scale-110 transition-all duration-300 aspect-video"
                 />
               </div>
