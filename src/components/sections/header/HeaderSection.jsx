@@ -73,7 +73,7 @@ const HeaderSection = () => {
             <NavLink
               to={item.link}
               key={item.link}
-              className="text-gray-500 px-5 py-3 border border-gray-500/20 rounded-lg hover:text-white hover:bg-gray-500/10 transition-all duration-300 bg-dark"
+              className="text-gray-500 px-5 py-3 border border-gray-500/20 rounded-lg hover:text-white hover:bg-gray-500/10 transition-all duration-300 bg-dark rotate-3 hover:rotate-0 "
               target="__blank"
               title={item.label}
             >

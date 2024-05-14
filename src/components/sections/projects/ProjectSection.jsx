@@ -45,6 +45,7 @@ const ProjectSection = () => {
           {featuredProjects.map((project) => (
             <div
               className="cursor-pointer group mb-10 border-b border-gray-500/20 pb-10-"
+              key={project.id}
               // ref={ref}
             >
               <div className="w-full h-72 relative overflow-hidden mb-3">
@@ -55,11 +56,11 @@ const ProjectSection = () => {
                 />
               </div>
               <div className="pl-2 w-full mb-4">
-                <h3 className="text-xl text-gray-500 mb-3 group-hover:text-primary transition-colors duration-300">
+                <h3 className="text-xl text-gray-400 mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.name}
                 </h3>
 
-                <h5 className="text-sm text-wrap opacity-50 tracking-widest font-light mb-5">
+                <h5 className="text-sm text-wrap opacity-80 tracking-widest font-light mb-5">
                   {project.description}
                 </h5>
 
@@ -67,8 +68,8 @@ const ProjectSection = () => {
                   {project.urls.map((link) => (
                     <NavLink
                       to={link.url}
-                      className="text-gray-500 px-5 py-3 border border-gray-500/20 rounded-lg bg-dark hover:bg-gray-500/10 hover:text-white transition-colors duration-300"
-                      target="__blank"
+                      className="text-gray-500 px-5 py-3 border border-gray-500/20 rounded-lg bg-dark hover:bg-gray-500/10 hover:text-white transition-colors duration-300 "
+                      target={link.target}
                     >
                       <link.icon size={20} />
                     </NavLink>

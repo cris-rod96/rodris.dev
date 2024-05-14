@@ -35,15 +35,34 @@ const SkillSection = () => {
           <RiGlasses2Line />
           Habilidades destacadas
         </h2>
-        <div className="md:flex md:justify-between gap-3 mb-10 grid grid-cols-2">
-          {skills.map((skill) => (
-            <div className="border border-gray-500/20 flex flex-col gap-3 items-center py-5 px-2 w-full rounded-lg text-gray-500 bg-dark hover:bg-gray-500/10 cursor-pointer hover:text-white transition-colors duration-300">
-              <skill.icon size={40} />
-              <h3 className="text-lg">{skill.name}</h3>
-            </div>
-          ))}
+        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)] border border-gray-500/20 py-5">
+          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_svg]:max-w-none  animate-infinite-scroll">
+            {skills.map((skill, idx) => (
+              <li
+                key={`skil-${idx}`}
+                className="px-5 py-3 flex flex-col gap-2 justify-center items-center"
+              >
+                <skill.icon size={40} />
+                {skill.name}
+              </li>
+            ))}
+          </ul>
+          <ul
+            className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none  animate-infinite-scroll"
+            aria-hidden="true"
+          >
+            {skills.map((skill, idx) => (
+              <li
+                key={`skil-${idx}`}
+                className="px-5 py-3 flex flex-col gap-2 justify-center items-center"
+              >
+                <skill.icon size={40} />
+                {skill.name}
+              </li>
+            ))}
+          </ul>
         </div>
-        <ViewMoreButton to={"/skills"} text="Todas las habilidades" />
+        <ViewMoreButton to={"/skills"} text="Ver todas" />
       </motion.div>
     </section>
   );

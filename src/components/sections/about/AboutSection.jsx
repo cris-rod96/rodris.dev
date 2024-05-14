@@ -53,7 +53,7 @@ const AboutSection = () => {
   return (
     <section className="border-b border-gray-500/20 py-10">
       <div className="lg:w-4/5 mx-auto flex flex-col">
-        <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-500 mb-10">
+        <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-400 mb-10">
           <RiUser6Line />
           Sobre mí
         </h2>
@@ -64,7 +64,7 @@ const AboutSection = () => {
             initial="hidden"
             animate={controlText}
             ref={textRef}
-            className="space-y-5 md:[&>p]:text-lg text-wrap text-gray-500 font-light"
+            className="space-y-5 md:[&>p]:text-lg text-wrap text-gray-400 font-light"
           >
             <p>
               ¡Hola! Soy Cristhian Rodríguez, aunque mis amigos me llaman
@@ -115,7 +115,7 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
-        <ViewMoreButton to={"/about"} text="Conoce más sobre mí" />
+        <ViewMoreButton to={"/about"} text="Ver más" />
       </div>
     </section>
   );
