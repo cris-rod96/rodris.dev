@@ -58,7 +58,7 @@ const AboutSection = () => {
           Sobre mí
         </h2>
 
-        <div className="md:grid md:grid-cols-2 mb-10 flex flex-col-reverse">
+        <div className="lg:grid lg:grid-cols-2 mb-10 flex flex-col-reverse">
           <motion.div
             variants={textVariants}
             initial="hidden"
@@ -72,7 +72,7 @@ const AboutSection = () => {
               Informática y Sistemas Computacionales. Aunque no me gradué
               oficialmente, tengo una sólida formación en este campo.
             </p>
-            <p className="md:block hidden">
+            <p className="lg:block hidden">
               Mi inmersión en el mundo de la programación comenzó en el año
               2014, y desde entonces he estado comprometido con el aprendizaje y
               el crecimiento continuo. El Bootcamp de Henry fue un paso
@@ -80,7 +80,7 @@ const AboutSection = () => {
               conocimiento adicionales necesarios para convertirme en un
               desarrollador full stack.
             </p>
-            <p className="md:block hidden">
+            <p className="lg:block hidden">
               Aunque me desenvuelvo bien en el desarrollo full stack, mi
               verdadera pasión y enfoque se encuentran en el Backend. Disfruto
               creando soluciones sólidas y eficientes que respalden las
@@ -106,7 +106,7 @@ const AboutSection = () => {
             ref={imageRef}
             className="flex items-start justify-center"
           >
-            <div className="md:w-[500px] md:h-[600px] w-52 h-52 rounded-full relative md:rounded-lg overflow-hidden border-2 border-gray-500/30 mb-10 md:mb-0">
+            <div className="lg:w-[500px] lg:h-[600px] w-52 h-52 rounded-full relative lg:rounded-lg overflow-hidden border-2 border-gray-500/30 mb-10 lg:mb-0">
               <img
                 src="/me.jpg"
                 alt=""

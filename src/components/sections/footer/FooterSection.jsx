@@ -4,9 +4,9 @@ import { NavLink } from "react-router-dom";
 
 const FooterSection = () => {
   return (
-    <footer className="relative h-full py-5 w-full">
-      <div className="pl-[13vw] flex items-center justify-center gap-3">
-        <div className="flex items-center gap-1 text-sm">
+    <footer className="relative h-full py-5 bg-dark w-full">
+      <div className="lg:pl-[13vw] flex items-center justify-center gap-3">
+        <div className="flex items-center gap-1 ">
           <h3 className="text-gray-500">Desarrollado por</h3>
           <NavLink
             to="https://github.com/cris-rod96"

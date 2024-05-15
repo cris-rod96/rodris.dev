@@ -5,7 +5,7 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
   return (
     <>
       <aside
-        className={`fixed lg:w-[13vw] md:w-[30vw] w-[70vw] h-full bg-dark border-r border-gray-500/20 transition-all duration-300 lg:left-0 ${
+        className={`fixed lg:w-[250px] md:w-[300px] w-[250px] h-full bg-dark border-r border-gray-500/20 transition-all duration-300 lg:left-0 ${
           showMenu ? "left-0" : "-left-full"
         } z-50`}
       >

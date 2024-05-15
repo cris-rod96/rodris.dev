@@ -45,11 +45,11 @@ const ContactSection = () => {
   };
 
   return (
-    <section className=" py-10" id="contact">
-      <div className="md:w-4/5 mx-auto">
+    <section className="lg:py-10 py-20" id="contact">
+      <div className="lg:w-4/5 mx-auto">
         {/* Formulario de contacto */}
-        <div className="md:w-3/4 mx-auto">
-          <h3 className="md:text-4xl text-2xl text-white mb-3">
+        <div className="lg:w-3/4 mx-auto">
+          <h3 className="lg:text-4xl text-2xl text-white mb-3">
             ¿Deseas que hablemos?
           </h3>
           <h5 className="text-gray-500">
@@ -68,24 +68,24 @@ const ContactSection = () => {
             className="mt-10 flex flex-col gap-3"
             onSubmit={handleSubmit}
           >
-            <div className="grid md:grid-cols-2 md:gap-2">
-              <div className="flex flex-col mb-5 md:mb-0">
+            <div className="grid lg:grid-cols-2 md:gap-2">
+              <div className="flex flex-col mb-5 lg:mb-0">
                 <input
                   type="text"
                   name="name"
                   value={messageData.name}
                   onChange={handleMessageData}
-                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10 text-white placeholder:text-gray-500"
+                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-gray-500/30 focus:border-gray-500/40 text-white placeholder:text-gray-500"
                   placeholder="Tu nombre"
                 />
               </div>
-              <div className="flex flex-col mb-5 md:mb-0">
+              <div className="flex flex-col mb-5 lg:mb-0">
                 <input
                   type="email"
                   name="to"
                   value={messageData.to}
                   onChange={handleMessageData}
-                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-transparent focus:border-gray-500/10 text-white placeholder:text-gray-500"
+                  className="px-3 py-5 outline-none bg-neutral-900 text-sm border border-gray-500/30 focus:border-gray-500/40 text-white placeholder:text-gray-500"
                   placeholder="Tu correo electrónico"
                 />
               </div>
@@ -97,7 +97,7 @@ const ContactSection = () => {
                 cols="30"
                 rows="10"
                 onChange={handleMessageData}
-                className="resize-none outline-none border border-transparent focus:border-gray-500/10 px-3 py-2 bg-neutral-900 text-sm text-white placeholder:text-gray-500"
+                className="resize-none px-3 py-5 outline-none bg-neutral-900 text-sm border border-gray-500/30 focus:border-gray-500/40 text-white placeholder:text-gray-500"
                 placeholder="Tu mensaje"
               ></textarea>
             </div>

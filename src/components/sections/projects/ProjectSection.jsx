@@ -41,10 +41,10 @@ const ProjectSection = () => {
           <RiCodeSSlashLine />
           Proyectos Destacados
         </h2>
-        <div className="grid md:grid-cols-3 gap-3 md:mb-10">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-3 md:mb-10">
           {featuredProjects.map((project) => (
             <div
-              className="cursor-pointer group mb-10 border-b border-gray-500/20 pb-10-"
+              className="cursor-pointer group mb-10 border-b border-gray-500/20 pb-10 flex flex-col lg:flex-col md:flex-row md:gap-3"
               key={project.id}
               // ref={ref}
             >
@@ -55,20 +55,20 @@ const ProjectSection = () => {
                   className="absolute w-full h-full object-cover group-hover:scale-110 transition-all duration-300 aspect-video"
                 />
               </div>
-              <div className="pl-2 w-full mb-4">
+              <div className="pl-2 w-full mb-4 relative">
                 <h3 className="text-xl text-gray-400 mb-3 group-hover:text-primary transition-colors duration-300">
                   {project.name}
                 </h3>
 
-                <h5 className="text-sm text-wrap opacity-80 tracking-widest font-light mb-5">
+                <h5 className="lg:text-sm text-wrap tracking-widest font-light mb-5">
                   {project.description}
                 </h5>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 md:absolute md:bottom-0 relative lg:relative">
                   {project.urls.map((link) => (
                     <NavLink
                       to={link.url}
-                      className="text-gray-500 px-5 py-3 border border-gray-500/20 rounded-lg bg-dark hover:bg-gray-500/10 hover:text-white transition-colors duration-300 "
+                      className="text-gray-500 px-5 py-3 border border-gray-500/30 rounded-lg bg-dark hover:bg-gray-500/10 hover:text-white transition-colors duration-300 "
                       target={link.target}
                     >
                       <link.icon size={20} />

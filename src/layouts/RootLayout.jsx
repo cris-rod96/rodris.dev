@@ -14,7 +14,7 @@ const RootLayout = () => {
       <button onClick={toggleMenu} className="lg:hidden absolute top-5 left-5">
         <RiMenuFill size={30} />
       </button>
-      <main className="md:pl-[13vw] overflow-x-hidden px-5">
+      <main className="md:px-5 lg:pl-[13vw] px-5 overflow-x-hidden">
         <Outlet />
       </main>
 
