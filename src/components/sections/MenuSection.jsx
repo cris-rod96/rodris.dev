@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import { MENU_DATA } from "../../data";
 import Item from "../item/Item";
 
-const MenuSection = () => {
+const MenuSection = ({ toggleMenu }) => {
   return (
     <section>
       <ul>
@@ -12,6 +12,7 @@ const MenuSection = () => {
             Icon={item.icon}
             label={item.label}
             key={item.path}
+            toggleMenu={toggleMenu}
           />
         ))}
       </ul>

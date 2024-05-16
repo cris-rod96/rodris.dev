@@ -4,6 +4,7 @@ import { Toaster, toast } from "sonner";
 import { messageEndpoint } from "../../api/message.api";
 import Container from "../../components/container/Container";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -49,7 +50,13 @@ const Contact = () => {
   return (
     <Container id="contact">
       {/* Formulario de contacto */}
-      <div className=" mx-auto lg:mt-0 mt-10">
+      <motion.div
+        className=" mx-auto lg:mt-0 mt-10"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+      >
         <NavLink
           to={"/"}
           className="flex items-center gap-2 lg:text-lg text-xl mb-5"
@@ -117,7 +124,7 @@ const Contact = () => {
             {sending ? "Enviando..." : "Enviar mensaje"}
           </button>
         </form>
-      </div>
+      </motion.div>
 
       <Toaster richColors />
     </Container>

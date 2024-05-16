@@ -5,6 +5,7 @@ import { RiCodeSSlashLine } from "react-icons/ri";
 import Container from "../container/Container";
 import Card from "../card/Card";
 import { PROJECTS_DATA } from "../../data";
+import { BtnViewAll } from "../buttons";
 
 const ProjectsSection = () => {
   const control = useAnimation();
@@ -41,11 +42,13 @@ const ProjectsSection = () => {
           Proyectos Destacados
         </h2>
         {/* Projects */}
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-3">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-3 ">
           {featuredProjects.map((project) => (
             <Card project={project} />
           ))}
         </div>
+
+        <BtnViewAll to={"/projects"} text="Ver más proyectos" />
       </motion.div>
     </Container>
   );

@@ -17,7 +17,7 @@ const RootLayout = () => {
       >
         <RiMenuFill size={30} />
       </button>
-      <main className="lg:pl-[13vw] pb-10">
+      <main className="lg:pl-[13vw] pb-10 ">
         <Outlet />
         <Footer />
       </main>

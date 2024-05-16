@@ -8,6 +8,7 @@ import { SKILLS_DATA } from "../../data";
 const SkillsSection = () => {
   const control = useAnimation();
   const [ref, inView] = useInView();
+  const skills = SKILLS_DATA.filter((skill) => skill.show);
 
   const exampleVariants = {
     visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
@@ -36,7 +37,7 @@ const SkillsSection = () => {
         </h2>
         <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]  py-5">
           <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_svg]:max-w-none  animate-infinite-scroll">
-            {SKILLS_DATA.map((skill, idx) => (
+            {skills.map((skill, idx) => (
               <li
                 key={`skil-${idx}`}
                 className="px-5 py-3 flex flex-col gap-2 justify-center items-center"
@@ -50,7 +51,7 @@ const SkillsSection = () => {
             className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none  animate-infinite-scroll"
             aria-hidden="true"
           >
-            {SKILLS_DATA.map((skill, idx) => (
+            {skills.map((skill, idx) => (
               <li
                 key={`skil-${idx}`}
                 className="px-5 py-3 flex flex-col gap-2 justify-center items-center"

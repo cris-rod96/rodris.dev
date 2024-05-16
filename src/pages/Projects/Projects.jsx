@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { PROJECTS_DATA } from "../../data";
 import { RiArrowLeftLine } from "react-icons/ri";
 import Container from "../../components/container/Container";
+import { motion } from "framer-motion";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -16,10 +17,15 @@ const Projects = () => {
           Regresar
         </NavLink>
         <section className="grid lg:grid-cols-2 gap-10 mt-10">
-          {PROJECTS_DATA.map((project) => (
-            <article
+          {PROJECTS_DATA.map((project, index) => (
+            <motion.article
+              key={project.id}
               className="border border-gray-500/20 overflow-hidden rounded-xl group cursor-pointer"
               onClick={() => goToDetail(project.id)}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -50 }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
             >
               <header className="relative h-80 w-full overflow-hidden">
                 <img
@@ -39,7 +45,7 @@ const Projects = () => {
                   {project.description}
                 </h2>
               </div>
-            </article>
+            </motion.article>
           ))}
         </section>
       </main>

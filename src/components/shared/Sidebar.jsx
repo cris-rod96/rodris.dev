@@ -10,12 +10,12 @@ const Sidebar = ({ showMenu, toggleMenu }) => {
         } transition-all duration-300 lg:left-0 z-50`}
       >
         <HeaderSection />
-        <MenuSection />
+        <MenuSection toggleMenu={toggleMenu} />
       </aside>
       <div
         className={`fixed w-full h-full bg-dark opacity-50 ${
           showMenu ? "block" : "hidden"
-        } transition-all duration-500`}
+        } transition-all duration-500 lg:hidden`}
         onClick={toggleMenu}
       />
     </>

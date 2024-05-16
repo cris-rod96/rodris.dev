@@ -77,10 +77,11 @@ export const PROJECTS_DATA = [
   },
   {
     id: "c9dcddfe-6ac4-41a7-9500-59de6179fdf5",
-    name: "Rick & Morty Wiki",
+    name: "Rick & Morty World",
     poster: "/rick_morty.webp",
     category: "Catálogo Interactivo",
     duration: "4 semanas",
+    roles: ["FullStack Developer"],
     description:
       "Explora el intrigante mundo de Rick & Morty: conoce a fondo a los personajes de la serie y elige a tus favoritos.",
     largeDescription:
@@ -136,7 +137,10 @@ export const PROJECTS_DATA = [
 
     poster: "/countries.webp",
     category: "Catálogo Interactivo",
-    largeDescription: "",
+    largeDescription:
+      "¿Conoces las banderas de cada país? Explora y descubre datos fascinantes sobre diferentes países a través de sus símbolos nacionales. Este proyecto, desarrollado con tecnologías modernas como React y Redux para una experiencia interactiva, CSS3 para diseño adaptable, Express, Sequelize y PostgreSQL para una gestión eficiente de datos, te permite sumergirte en la diversidad de banderas del mundo. Además, cuenta con funcionalidades como login, filtros y la capacidad de agregar banderas a una lista de favoritos. Todo alojado en Vercel y Render para una experiencia de usuario inigualable. ¡Explora más sobre las banderas del mundo ahora mismo!",
+    duration: "4 semanas",
+    roles: ["FullStack Developer"],
     description:
       "¿Conoces las banderas de cada país? Explora y descubre datos fascinantes sobre diferentes países a través de sus símbolos nacionales.",
 
@@ -191,9 +195,13 @@ export const PROJECTS_DATA = [
     name: "Rick & Morty Wiki",
     poster: "/rick_morty_wiki.webp",
     category: "Catálogo Interactivo",
+    duration: "2 semanas",
+    roles: ["FullStack Developer"],
     description:
       "Esta es una versión mejorada de Rick & Morty. Como desarrollador, me he permitido seleccionar nuevas tecnologías que he ido aprendiendo a lo largo del proyecto, añadiendo un toque fresco y renovado.",
-    largeDescription: "",
+    largeDescription:
+      "Esta es una versión mejorada de Rick & Morty. Como desarrollador, me he permitido seleccionar nuevas tecnologías que he ido aprendiendo a lo largo del proyecto, añadiendo un toque fresco y renovado. Entre estas tecnologías se encuentra Tailwind CSS, que proporciona un enfoque moderno y eficiente para el diseño de la interfaz de usuario, además de React y Redux para una experiencia interactiva sin igual. También se utilizan Express, Sequelize y PostgreSQL para una gestión eficiente de datos. Con funcionalidades como login, filtros y la capacidad de agregar personajes a una lista de favoritos, esta versión lleva la experiencia de Rick & Morty a un nuevo nivel. Todo alojado en Vercel y Render para una experiencia de usuario inigualable.",
+
     urls: [
       {
         icon: TbWorldCode,
@@ -242,10 +250,19 @@ export const PROJECTS_DATA = [
     name: "Chat Space",
     poster: "/chat_space.webp",
     category: "Mensajería",
+    duration: "En proceso",
+    roles: ["FullStack Developer", "Diseñador"],
     description:
       "Espacio web donde podrás chatear con otras personaes registradas en la aplicación. Este proyecto se encuentra en etapa de desarrollo a modo de práctica y aprendizaje en nuevas tecnologías.",
-    largeDescription: "",
-    urls: [],
+    largeDescription:
+      "Explora un espacio web donde podrás chatear con otras personas registradas en la aplicación. Este proyecto, aún en etapa de desarrollo, se presenta como una práctica y experiencia de aprendizaje en nuevas tecnologías. Además de la funcionalidad de chat, se ha integrado socket.io para ofrecer una comunicación en tiempo real entre los usuarios. Todo ello diseñado con el objetivo de proporcionar una experiencia interactiva y envolvente. Únete a esta emocionante aventura y descubre las posibilidades del mundo del chat en línea mientras te sumerges en las últimas tecnologías.",
+    urls: [
+      {
+        icon: LuGithub,
+        url: "https://github.com/cris-rod96/chat-space.git",
+        label: "Code",
+      },
+    ],
     technologies: [
       {
         name: "React.JS",
@@ -282,10 +299,19 @@ export const PROJECTS_DATA = [
     name: "JobTrackr",
     poster: "/jobtrackr.webp",
     category: "Gestión de Talento",
+    roles: ["FullStack Developer"],
+    duration: "1 semana",
     description:
       "JobTrackr, aliado personal en la búsqueda de empleo. Diseñado para simplificar y organizar las postulaciones laborales, JobTrackr es una plataforma intuitiva y fácil de usar que ayuda a mantener un seguimiento detallado de todas las aplicaciones de trabajo.",
-    largeDescription: "",
-    urls: [],
+    largeDescription:
+      "JobTrackr, tu aliado personal en la búsqueda de empleo. Diseñado para simplificar y organizar las postulaciones laborales, JobTrackr es una plataforma intuitiva y fácil de usar que ayuda a mantener un seguimiento detallado de todas las aplicaciones de trabajo. Desarrollado con tecnologías modernas como Mongoose y MongoDB, garantiza una gestión eficiente de datos, ofreciendo una experiencia fluida y sin complicaciones. Con JobTrackr, mantén el control de tus oportunidades laborales y da un paso más cerca hacia tu próximo empleo. Descubre una nueva forma de buscar trabajo con JobTrackr.",
+    urls: [
+      {
+        icon: LuGithub,
+        url: "https://github.com/cris-rod96/client-jobtrackr.git",
+        label: "Code",
+      },
+    ],
     technologies: [
       {
         name: "React.JS",
