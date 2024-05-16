@@ -12,7 +12,7 @@ const RootLayout = () => {
     <>
       <Sidebar showMenu={showMenu} toggleMenu={toggleMenu} />
       <BtnMenu toggleMenu={toggleMenu} />
-      <main className="lg:pl-[13vw] pb-10 ">
+      <main className="lg:pl-[200px] pb-10 ">
         <Outlet />
         <Footer />
       </main>
