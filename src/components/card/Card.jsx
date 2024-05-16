@@ -32,7 +32,7 @@ const Card = ({ project }) => {
               to={link.url}
               key={link.url}
               className="text-gray-500 p-4 border border-gray-500/20 rounded-lg hover:text-white hover:bg-gray-500/10 transition-all duration-300 bg-dark"
-              target="__blank"
+              target={link.target}
               title={link.label}
             >
               <link.icon size={20} />

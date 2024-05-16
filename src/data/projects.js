@@ -43,9 +43,9 @@ export const PROJECTS_DATA = [
       },
       {
         icon: CiViewList,
-        url: "/detail/057132cd-1253-4318-8d71-6427e2e6c1ae",
+        url: "/project/057132cd-1253-4318-8d71-6427e2e6c1ae",
         label: "Detalle",
-        target: "_blank",
+        target: "",
       },
     ],
     technologies: [
@@ -91,17 +91,19 @@ export const PROJECTS_DATA = [
         icon: TbWorldCode,
         url: "https://my-rick-and-morty.vercel.app/",
         label: "Deploy",
+        target: "_blank",
       },
       {
         icon: LuGithub,
         url: "https://github.com/cris-rod96/my_rick_and_morty",
         label: "Code",
+        target: "_blank",
       },
       {
         icon: CiViewList,
-        url: "/detail/c9dcddfe-6ac4-41a7-9500-59de6179fdf5",
+        url: "/project/c9dcddfe-6ac4-41a7-9500-59de6179fdf5",
         label: "Detalle",
-        target: "_blank",
+        target: "",
       },
     ],
     technologies: [
@@ -149,18 +151,20 @@ export const PROJECTS_DATA = [
         icon: TbWorldCode,
         url: "https://pi-countries-three-alpha.vercel.app/",
         label: "Deploy",
+        target: "_blank",
       },
       {
         icon: LuGithub,
         url: "https://github.com/cris-rod96/pi-countries.git",
         label: "Code",
+        target: "_blank",
       },
 
       {
         icon: CiViewList,
-        url: "/detail/45e6cc02-74b7-41f2-9e1a-3a9bd2a25d76",
+        url: "/project/45e6cc02-74b7-41f2-9e1a-3a9bd2a25d76",
         label: "Detalle",
-        target: "_blank",
+        target: "",
       },
     ],
     technologies: [

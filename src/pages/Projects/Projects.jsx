@@ -9,6 +9,7 @@ const Projects = () => {
   const goToDetail = (id) => {
     navigate(`/project/${id}`);
   };
+
   return (
     <Container id="projects">
       <main className="mt-10 lg:mt-0">
