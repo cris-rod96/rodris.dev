@@ -1,11 +1,9 @@
-import { GoDotFill } from "react-icons/go";
 import Container from "../container/Container";
-import { NavLink } from "react-router-dom";
-
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { SOCIAL_DATA } from "../../data";
+import { BtnAvailable, BtnSocial } from "../buttons";
 
 const IntroSection = () => {
   const control = useAnimation();
@@ -45,11 +43,7 @@ const IntroSection = () => {
               className="absolute w-full h-full object-cover"
             />
           </div>
-
-          <button className="flex items-center md:justify-start justify-center gap-1 px-5 py-2 border border-primary text-primary bg-primary/10 rounded-md hover:bg-primary/20 hover:text-white duration-300 transition-colors md:mb-0 mb-10">
-            <GoDotFill />
-            Disponible
-          </button>
+          <BtnAvailable text="Disponible" to="/contact" />
         </div>
 
         <div className="md:max-w-3xl mb-14">
@@ -67,15 +61,7 @@ const IntroSection = () => {
 
         <div className="flex items-center gap-2">
           {SOCIAL_DATA.map((item) => (
-            <NavLink
-              to={item.link}
-              key={item.link}
-              className="text-gray-500 p-4 border border-gray-500/20 rounded-lg hover:text-white hover:bg-gray-500/10 transition-all duration-300 bg-dark"
-              target="__blank"
-              title={item.label}
-            >
-              <item.icon size={20} />
-            </NavLink>
+            <BtnSocial Icon={item.icon} label={item.label} to={item.link} />
           ))}
         </div>
       </motion.div>

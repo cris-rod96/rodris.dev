@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { RiUser6Line } from "react-icons/ri";
 import Container from "../container/Container";
 import { useEffect } from "react";
+import { BtnViewAll } from "../buttons";
 
 const AboutSection = () => {
   const controlText = useAnimation();
@@ -51,7 +52,7 @@ const AboutSection = () => {
     }
   }, [controlImage, imageInView]);
   return (
-    <Container>
+    <Container id="about">
       <div className="flex flex-col">
         <h2 className="md:text-3xl text-2xl flex items-center gap-2 text-gray-400 mb-10">
           <RiUser6Line />
@@ -115,7 +116,7 @@ const AboutSection = () => {
             </div>
           </motion.div>
         </div>
-        {/* <ViewMoreButton to={"/about"} text="Ver más" /> */}
+        <BtnViewAll to={"/about"} text="Ver perfil" />
       </div>
     </Container>
   );

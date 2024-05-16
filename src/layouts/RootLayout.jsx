@@ -3,6 +3,7 @@ import Sidebar from "../components/shared/Sidebar";
 import { RiMenuFill } from "react-icons/ri";
 import { useState } from "react";
 import Footer from "../components/footer/Footer";
+import { BtnMenu } from "../components/buttons";
 
 const RootLayout = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -10,13 +11,7 @@ const RootLayout = () => {
   return (
     <>
       <Sidebar showMenu={showMenu} toggleMenu={toggleMenu} />
-      <button
-        className="absolute top-5 left-5 lg:hidden"
-        type="button"
-        onClick={toggleMenu}
-      >
-        <RiMenuFill size={30} />
-      </button>
+      <BtnMenu toggleMenu={toggleMenu} />
       <main className="lg:pl-[13vw] pb-10 ">
         <Outlet />
         <Footer />

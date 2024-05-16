@@ -9,7 +9,7 @@ const App = () => {
   }, [pathname]);
   return (
     <>
-      <AppRouter />;
+      <AppRouter />
     </>
   );
 };

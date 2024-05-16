@@ -5,6 +5,7 @@ import { PROJECTS_DATA } from "../../data";
 import Container from "../../components/container/Container";
 import { LuGithub } from "react-icons/lu";
 import { motion } from "framer-motion";
+import { BtnLive } from "../../components/buttons";
 const Detail = () => {
   const { id } = useParams();
   const [currentProject, setCurrentProject] = useState(null);
@@ -34,22 +35,14 @@ const Detail = () => {
                 <div className="flex flex-col justify-between lg:my-0">
                   <h3 className="mb-2">{currentProject.description}</h3>
                   {currentProject.urls.some((url) => url.label === "Deploy") ? (
-                    <NavLink
-                      key={
-                        currentProject.urls.find(
-                          (url) => url.label === "Deploy"
-                        ).url
-                      }
+                    <BtnLive
                       to={
                         currentProject.urls.find(
                           (url) => url.label === "Deploy"
                         ).url
                       }
-                      target="_blank"
-                      className="px-3 py-2 border border-gray-500/20 rounded-md flex items-center justify-center hover:text-white hover:bg-gray-500/10 transition-colors duration-300 lg:w-40 w-full"
-                    >
-                      Live Demo
-                    </NavLink>
+                      text="Live Demo"
+                    />
                   ) : (
                     <div className="px-3 py-2 border border-primary rounded-md flex items-center justify-center text-primary bg-primary/15  transition-colors duration-300 lg:w-40 w-full">
                       Próximamente...
@@ -95,13 +88,7 @@ const Detail = () => {
                 exit={{ opacity: 0, y: 100 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
-                <p
-                  initial={{ opacity: 0, y: 100 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 100 }}
-                  transition={{ duration: 0.8, delay: 1.1 }}
-                  className="mt-5 text-justify text-gray-400"
-                >
+                <p className="mt-5 text-justify text-gray-400">
                   {currentProject.largeDescription}
                 </p>
                 {currentProject.urls.some((url) => url.label === "Code") ? (

@@ -5,6 +5,7 @@ import { messageEndpoint } from "../../api/message.api";
 import Container from "../../components/container/Container";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import { BtnBack, BtnSubmit } from "../../components/buttons";
 
 const Contact = () => {
   const [sending, setSending] = useState(false);
@@ -57,13 +58,7 @@ const Contact = () => {
         exit={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.3, delay: 0.2 }}
       >
-        <NavLink
-          to={"/"}
-          className="flex items-center gap-2 lg:text-lg text-xl mb-5"
-        >
-          <RiArrowLeftLine size={24} />
-          Regresar
-        </NavLink>
+        <BtnBack />
         <h3 className="lg:text-4xl text-2xl text-white mb-3">
           ¿Deseas que hablemos?
         </h3>
@@ -116,13 +111,7 @@ const Contact = () => {
               placeholder="Tu mensaje"
             ></textarea>
           </div>
-
-          <button
-            type="submit"
-            className="mt-5 border border-gray-500/20 py-3 bg-primary text-white font-bold text-lg hover:bg-primary/75 transition-colors duration-300"
-          >
-            {sending ? "Enviando..." : "Enviar mensaje"}
-          </button>
+          <BtnSubmit sending={sending} />
         </form>
       </motion.div>
 
