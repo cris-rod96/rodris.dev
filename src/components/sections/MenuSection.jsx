@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { MENU_DATA } from "../../data";
-import Item from "../item/Item";
+import { NavLink } from 'react-router-dom'
+import { MENU_DATA } from '../../data'
+import Item from '../item/Item'
 
 const MenuSection = ({ toggleMenu }) => {
   return (
@@ -17,7 +17,7 @@ const MenuSection = ({ toggleMenu }) => {
         ))}
       </ul>
     </section>
-  );
-};
+  )
+}
 
-export default MenuSection;
+export default MenuSection
