@@ -5,7 +5,7 @@ const HeaderSection = () => {
         Cristhian Rodríguez
       </h3>
       <h5 className='tracking-wide text-gray-400 font-light text-nowrap'>
-        Backend Developer
+        FullStack Developer
       </h5>
     </section>
   )
